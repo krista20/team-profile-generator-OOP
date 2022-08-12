@@ -20,6 +20,7 @@
     "balanced-match": "^1.0.2",
     "base64-js": "^1.5.1",
     "bl": "^5.0.0",
+    "bootstrap": "^5.2.0",
     "brace-expansion": "^1.1.11",
     "braces": "^3.0.2",
     "browserslist": "^4.21.3",
