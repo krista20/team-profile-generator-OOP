@@ -24,10 +24,10 @@ test ('test for getEmail()', () => {
     console.log(employee.getEmail());
 })
 
-// test ('test fot getRole()', () => {
-//     expect(employee.getRole()).toBe(Employee);
-//     // console.log(employee.getRole());
-// })
+test ('test fot getRole()', () => {
+    expect(employee.getRole()).toBe("Employee");
+    console.log(employee.getRole());
+})
 
 
 
