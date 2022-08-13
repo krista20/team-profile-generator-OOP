@@ -1,7 +1,6 @@
 // const { test } = require('picomatch');
 const { expect } = require('expect');
 const Intern = require('../lib/Intern.js');
-const Employee = require('../lib/Employee.js');
 
 const intern = new Intern('John', '3', 'john@fakemail.com', '2University');
 

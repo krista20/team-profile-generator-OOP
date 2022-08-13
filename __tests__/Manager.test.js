@@ -1,7 +1,6 @@
 // const { test } = require('picomatch');
 const { expect } = require('expect');
 const Manager = require('../lib/Manager.js');
-const Employee = require('../lib/Employee.js');
 
 const manager = new Manager('Sara', '4', 'sara@fakemail.com', '3D');
 

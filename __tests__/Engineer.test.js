@@ -1,7 +1,6 @@
 // const { test } = require('picomatch');
 const { expect } = require('expect');
 const Engineer = require('../lib/Engineer.js');
-const Employee = require('../lib/Employee.js');
 
 const engineer = new Engineer('Alec', '2', 'alec@fakemail.com', 'alec20');
 
@@ -19,7 +18,7 @@ test('test for getGithub()', () => {
 });
 
 test('test fot getRole()', () => {
-    expect(engineer.getRole()).toBe("Employee");
+    expect(engineer.getRole()).toBe("Engineer");
     console.log(engineer.getRole());
 });
 
