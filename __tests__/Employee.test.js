@@ -19,5 +19,15 @@ test ('test for getId()', () => {
     console.log(employee.getID());
 })
 
+test ('test for getEmail()', () => {
+    expect(employee.getEmail()).toBe('jared@fakemail.com');
+    console.log(employee.getEmail());
+})
+
+// test ('test fot getRole()', () => {
+//     expect(employee.getRole()).toBe(Employee);
+//     // console.log(employee.getRole());
+// })
+
 
 
