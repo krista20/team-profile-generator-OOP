@@ -1,18 +1,21 @@
-const { test } = require('picomatch');
+// const { test } = require('picomatch');
+const { expect } = require('expect');
 const Engineer = require('../lib/Engineer.js');
-// const Employee = require('../lib/Employee.js');
-const engineer = new Engineer('Alec', '2', 'alec@fakemail.com');
+const Employee = require('../lib/Employee.js');
+
+const engineer = new Engineer('Alec', '2', 'alec@fakemail.com', 'alec20');
 
 test('test for an engineer employee object', () => {
     expect(engineer.name).toBe('Alec');
     expect(engineer.id).toBe('2');
     expect(engineer.email).toBe('alec@fakemail.com');
-    console.log(expect(engineer.email));
+  
 });
 
+
 test('test for getGithub()', () => {
-    expect(engineer.getGitHub()).toBe('ibalec');
-    console.log(engineer.getGitHub());
+    expect(engineer.getGithub()).toBe('alec20');
+    console.log(engineer.getGithub());
 });
 
 test('test fot getRole()', () => {

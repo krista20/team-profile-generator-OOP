@@ -1,5 +1,6 @@
 const { expect } = require('expect');
 const Employee = require('../lib/Employee.js');
+
 const employee = new Employee('Jared', '1', 'jared@fakemail.com');
 
 test ('creates a employee object', () => {
