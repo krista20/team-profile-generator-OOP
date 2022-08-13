@@ -9,5 +9,15 @@ test ('creates a employee object', () => {
     expect(employee.email).toBe('jared@fakemail.com');
 });
 
+test ('test getName()', () => {
+    expect(employee.getName()).toBe('Jared');
+    console.log(employee.getName());
+})
+
+test ('test for getId()', () => {
+    expect(employee.getID()).toBe('1');
+    console.log(employee.getID());
+})
+
 
 
