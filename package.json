@@ -2,7 +2,7 @@
   "name": "team-profile-generator-oop",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib"
   },
@@ -90,7 +90,7 @@
     "imurmurhash": "^0.1.4",
     "inflight": "^1.0.6",
     "inherits": "^2.0.4",
-    "inquirer": "^9.1.0",
+    "inquirer": "^8.2.4",
     "is-arrayish": "^0.2.1",
     "is-core-module": "^2.10.0",
     "is-fullwidth-code-point": "^3.0.0",
@@ -233,7 +233,7 @@
     "yocto-queue": "^0.1.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "repository": {
     "type": "git",
