@@ -62,7 +62,7 @@ const getTypeEmployee = () => {
                 internInput();
                 break;
             default:
-                allEmployees();
+                getAllEmployees();
         }
     })
 }
@@ -162,10 +162,10 @@ const internInput = () => {
 
 
 // ENDING INPUTS
-// const employeeGroup = () => {
-// fs.writeFileSync(pathOutput);  
-// }
+const getAllEmployees = () => {
+fs.writeFileSync(pathOutput, helper(allEmployees), "utf-8");  
+}
 
 
 // CALLING BACK FUNCTION SO USER INPUTS ON TERMINAL CAN WORK
-inputEmployee();
+inputEmployee(); 

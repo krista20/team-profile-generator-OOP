@@ -77,22 +77,24 @@ const displayIntern = intern => {
 
 }
 
-module.exports = allInputs => {
-    return `
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css" />
-        <link rel="stylesheet" href="/" src="/dist/css/index.css">
-        <title>Team Profiles</title>
-    </head>
-    <main >
+module.exports = showEmployees(allInputs);
+
+// module.exports = allInputs => {
+//     return `
+//     <!DOCTYPE html>
+//     <html lang="en">
+//     <head>
+//         <meta charset="UTF-8">
+//         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css" />
+//         <link rel="stylesheet" href="/" src="/dist/css/index.css">
+//         <title>Team Profiles</title>
+//     </head>
+//     <main >
     
-    <body> ${showEmployees(allInputs)} </body>
-    </main>
-    </html>
-    `
-}
+//     <body> ${showEmployees(allInputs)} </body>
+//     </main>
+//     </html>
+//     `
+// }
