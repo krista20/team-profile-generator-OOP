@@ -7,8 +7,10 @@ const fs = require("fs");
 const path = require("path");
 const dirpath = path.join(__dirname, '');
 const output = path.join(dirpath, 'index.html');
-const allEmplyees = [];
+const allEmployees = [];
 
+
+//BASE --> getting employee inputs
 const inputEmployee = () => {
     return inquirer.prompt(
         [
@@ -31,11 +33,14 @@ const inputEmployee = () => {
     ]).then(inputs => {
         // getting all answers for employee and pushing it to employee (starting w/ this since employee is the parent)
         const employee = new Employee(inputs.name, inputs.id, inputs.email);
-        allEmplyees.push(employee);
-        // need function
+        allEmployees.push(employee);
+        // returning back getTypeEmployee() here, since above is the parent element.
+        getTypeEmployee();
     })
 };
 
+
+// User selecting the type of Employee
 const getTypeEmployee = () => {
     return inquirer.prompt ([
         {
@@ -44,6 +49,54 @@ const getTypeEmployee = () => {
             message: 'Select a type of Employee:',
             choices: ['Manager', 'Engineer', 'Intern']
         }
-    ])
+    ]).then(answers => {
+        switch (answers.menu) {
+            case "Manager":
+                managerInput();
+                break;
+            case "Engineer":
+                engineerInput();
+                break;
+            case "Intern":
+                internInput();
+                break;
+            default:
+                allEmployees();
+        }
+    })
 }
-// new Employee().initializeEmployee();
+
+
+// MANAGER QUESTIONS
+const managerInput = () => {
+    return inquirer.prompt ([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'Input your manager name:'
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'Input your manager id number:'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Input your manager email address:'
+        },
+        {
+            input: 'input',
+            name: 'officeNumber',
+            message: 'Input your office number:'
+        }
+    ]).then(inputs => {
+        const manager = new Manager('inputs.name', 'inputs.id', 'inputs.email', 'inputs.officeNumber');
+        allEmployees.push(manager);
+        getTypeEmployee();
+    })
+}
+
+
+// CALLING BACK FUNCTION SO USER INPUTS ON TERMINAL CAN WORK
+inputEmployee();
