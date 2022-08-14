@@ -10,7 +10,7 @@ const output = path.join(dirpath, 'index.html');
 const allEmployees = [];
 
 
-//BASE --> getting employee inputs
+//BASE --> GETTING EMPLOYEE INPUTS
 const inputEmployee = () => {
     return inquirer.prompt(
         [
@@ -40,7 +40,7 @@ const inputEmployee = () => {
 };
 
 
-// User selecting the type of Employee
+// USER SELECTING TYPE OF EMPLOYEE
 const getTypeEmployee = () => {
     return inquirer.prompt ([
         {
@@ -93,6 +93,68 @@ const managerInput = () => {
     ]).then(inputs => {
         const manager = new Manager('inputs.name', 'inputs.id', 'inputs.email', 'inputs.officeNumber');
         allEmployees.push(manager);
+        getTypeEmployee();
+    })
+}
+
+
+// ENGINEER QUESTIONS
+const engineerInput = () => {
+    return inquirer.prompt ([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'Input your engineer name:'
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'Input your engineer id number:'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Input your engineer email address:'
+        },
+        {
+            input: 'input',
+            name: 'github',
+            message: 'Input your Github Username:'
+        }
+    ]).then(inputs => {
+        const engineer = new Engineer('inputs.name', 'inputs.id', 'inputs.email', 'inputs.github');
+        allEmployees.push(engineer);
+        getTypeEmployee();
+    })
+}
+
+
+// INTERN QUESTIONS
+const internInput = () => {
+    return inquirer.prompt ([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'Input your intern name:'
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'Input your intern id number:'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Input your intern email address:'
+        },
+        {
+            input: 'input',
+            name: 'school',
+            message: 'Input your School name:'
+        }
+    ]).then(inputs => {
+        const intern = new Intern('inputs.name', 'inputs.id', 'inputs.email', 'inputs.school');
+        allEmployees.push(intern);
         getTypeEmployee();
     })
 }
