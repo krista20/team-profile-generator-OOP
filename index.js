@@ -5,8 +5,9 @@ const Manager = require('./lib/Manager.js');
 const Intern = require('./lib/Intern.js');
 const fs = require("fs");
 const path = require("path");
-const dirpath = path.join(__dirname, '');
-const output = path.join(dirpath, 'index.html');
+const helper = require('./src/helper.js')
+const dirOutput = path.resolve(__dirname, 'output');
+const pathOutput = path.join(dirOutput, 'index.html');
 const allEmployees = [];
 
 
@@ -158,6 +159,12 @@ const internInput = () => {
         getTypeEmployee();
     })
 }
+
+
+// ENDING INPUTS
+// const employeeGroup = () => {
+// fs.writeFileSync(pathOutput);  
+// }
 
 
 // CALLING BACK FUNCTION SO USER INPUTS ON TERMINAL CAN WORK
