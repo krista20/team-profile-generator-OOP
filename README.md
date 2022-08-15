@@ -15,4 +15,4 @@ All Tests Passed:
 
 ## Github to Repository
 GitHub: https://github.com/krista20/team-profile-generator-OOP
-Link to Demonstration Video: 
+Link to Demonstration Video: https://drive.google.com/file/d/1MqptHn9slt3iGEKFko390ak-m736SnCO/view?usp=sharing
