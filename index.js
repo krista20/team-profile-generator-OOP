@@ -163,6 +163,7 @@ const internInput = () => {
 
 // ENDING INPUTS
 const getAllEmployees = () => {
+    //if statement?
 fs.writeFileSync(pathOutput, helper(allEmployees), "utf-8");  
 }
 

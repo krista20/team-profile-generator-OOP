@@ -14,7 +14,7 @@ const showEmployees = (allInputs) => {
                 <div ${employee.id}></div>
                 <div ${employee.email}></div>
             </div>`;
-            html.push(showEmployee);
+            index.push(showEmployee);
     }
 
 // MANAGER INPUTS GOING INTO HTML TO DISPLAY!
@@ -26,20 +26,20 @@ const displayManager = manager => {
             <div ${manager.email}></div>
             <div ${manager.officeNumber}></div>
         </div>`;
-        html.push(showManager);
+        index.push(showManager);
         console.log(showManager());
 }
 
 // ENGINEER INPUTS GOING INTO HTML TO DISPLAY!
 const displayEngineer = engineer => {
-    let showManager = 
+    let showEngineer = 
         `<div>
             <div ${engineer.name}></div>
             <div ${engineer.id}></div>
             <div ${engineer.email}></div>
             <div ${engineer.github}></div>
         </div>`;
-        html.push(showEngineer);
+        index.push(showEngineer);
         console.log(showEngineer());
 }
 
@@ -53,7 +53,7 @@ const displayIntern = intern => {
             <div ${intern.email}></div>
             <div ${intern.github}></div>
         </div>`;
-        html.push(showIntern);
+        index.push(showIntern);
         console.log(showIntern());
 }
 
@@ -73,28 +73,27 @@ const displayIntern = intern => {
             displayIntern(allInputs[i]);
         }
     }
-        return html.join('');
+        return index.join('');
 
 }
 
-module.exports = showEmployees(allInputs);
 
-// module.exports = allInputs => {
-//     return `
-//     <!DOCTYPE html>
-//     <html lang="en">
-//     <head>
-//         <meta charset="UTF-8">
-//         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-//         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css" />
-//         <link rel="stylesheet" href="/" src="/dist/css/index.css">
-//         <title>Team Profiles</title>
-//     </head>
-//     <main >
+module.exports = allInputs => {
+    return `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css" />
+        <link rel="stylesheet" href="/" src="/dist/css/index.css">
+        <title>Team Profiles</title>
+    </head>
+    <main >
     
-//     <body> ${showEmployees(allInputs)} </body>
-//     </main>
-//     </html>
-//     `
-// }
+    <body> ${showEmployees(allInputs)} </body>
+    </main>
+    </html>
+    `
+}
